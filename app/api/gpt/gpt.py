@@ -3,7 +3,7 @@ from openai import OpenAI
 
 #############################################
 ### The main function of the GPT package. ###
-client = OpenAI(api_key="YOUR_API_KEY")
+client = OpenAI(api_key="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")
 
 def gpt(message):
   completion = client.chat.completions.create(
