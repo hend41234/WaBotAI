@@ -2,8 +2,8 @@ from app.api.message.create_message import CreateMessage
 from twilio.rest import Client
 import time 
 
-account_sid = 'YOUR_ACCOUNT_SID'
-auth_token = 'YOUR_AUTH_TOKEN'
+account_sid = 'ACf2ddc427fb0d0a97afab3be17d74a7eb'
+auth_token = '0150a2e694c1414f7b9796d268882bb7'
 client = Client(account_sid, auth_token)
 
 
@@ -15,9 +15,10 @@ class SendMessage:
     
     def send_response(self):
         message = CreateMessage(self.bot, self.user)
-        response = message.create_message(self.message)
+        #response = message.create_message(self.message)
+        response = "testing OK"
         response = response.replace("http://localhost", "localhost")# change http://localhost to localhost, because in twilio doesn't work to send a message
-        lenght_response = len(response)
+        lenght_response = len(response) 
         limit = 1599
         multiple = int(lenght_response/limit)
 
