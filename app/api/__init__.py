@@ -2,7 +2,7 @@ from fastapi import APIRouter, Request, Form
 
 import datetime
 
-from app.api_model.resposemodel import ResponseModel
+from app.api_model.responsemodel import ResponseModel
 from app.api.message.get_message import GetMessage
 from app.api.message.send_message import SendMessage
 
