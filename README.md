@@ -45,6 +45,8 @@ If you don't have an OpenAI account, register at [OpenAI Platform](https://platf
     ```
 
 ## 3. Setting Up Ngrok Server
+If you want to use another server, skip this step.\
+It will be used to capture messages thrown from Twilio.
 
 * **Installation:**
     - Install Ngrok via Apt:
@@ -74,19 +76,24 @@ If you don't have an OpenAI account, register at [OpenAI Platform](https://platf
     pip install -r requirements.txt
     ```
 
-* **Setting up Twilio Webhook:**
-    Obtain the Ngrok domain from [Ngrok Dashboard](https://dashboard.ngrok.com/cloud-edge/domains) (`this is your server`). Update the Twilio sandbox settings to use the Ngrok domain.
-
+* **Setting up Twilio Webhook:** 
+    Use the server address that will be used to capture messages from Twilio.\
+    Use your own server address if you don't use ngrok.
+  
+    Obtain the Ngrok domain from [Ngrok Dashboard](https://dashboard.ngrok.com/cloud-edge/domains). Update the Twilio sandbox settings to use the Ngrok domain.\
+    e.g :
     ```plaintext
-    e.g., https://your-server.com/api/wa
+    https://your-server.com/api/wa
     ```
     Don't forget to add `/api/wa`.
 
 * **Running Ngrok:**
+* 
+    Skip this step if you're using your own server.
+  
     ```bash
     ngrok http --domain=your-domain.ngrok-free.app 8000
     ```
-    Skip this step if you're using your own server.
 
 * **Running the Application:**
     ```bash
