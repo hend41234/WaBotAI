@@ -30,7 +30,7 @@ Get started by registering for a free Twilio account at [Twilio](https://www.twi
 If you don't have an OpenAI account, register at [OpenAI Platform](https://platform.openai.com/login?launch). Obtain your `API Key` from the [API Keys section](https://platform.openai.com/api-keys).
 
 * **API Key Configuration:**
-    Open the file `app/api/message/gpt.py` in your code editor.
+    Open the file `app/api/gpt/gpt.py` in your code editor.
     Locate the variable `api_key` and replace `'YOUR_API_KEY'` with your OpenAI API key.
 
     ```python
